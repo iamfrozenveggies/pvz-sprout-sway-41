@@ -1,0 +1,236 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    /* Plants vs Zombies inspired palette */
+    --background: 170 100% 95%;
+    --foreground: 140 70% 15%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 140 70% 15%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 140 70% 15%;
+
+    /* Bright, vibrant green primary */
+    --primary: 120 85% 45%;
+    --primary-foreground: 0 0% 100%;
+
+    /* Sunny yellow secondary */
+    --secondary: 50 95% 65%;
+    --secondary-foreground: 140 70% 15%;
+
+    --muted: 170 30% 88%;
+    --muted-foreground: 140 40% 45%;
+
+    /* Sky blue accent */
+    --accent: 200 80% 60%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 170 40% 85%;
+    --input: 170 40% 90%;
+    --ring: 120 85% 45%;
+
+    /* Enhanced design tokens */
+    --plant-green: 120 85% 45%;
+    --plant-green-light: 120 75% 60%;
+    --plant-green-dark: 120 70% 35%;
+    --leaf-green: 110 80% 50%;
+    --stem-green: 130 60% 40%;
+    --highlight: 60 100% 85%;
+    --shadow: 140 40% 25%;
+
+    /* Gradients */
+    --gradient-leaf: linear-gradient(135deg, hsl(110 80% 50%), hsl(120 85% 45%));
+    --gradient-stem: linear-gradient(180deg, hsl(130 60% 40%), hsl(140 55% 35%));
+    --gradient-background: linear-gradient(135deg, hsl(170 100% 95%), hsl(180 80% 90%));
+    --gradient-highlight: linear-gradient(45deg, hsl(60 100% 85%), transparent);
+
+    --radius: 1rem;
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 210 40% 98%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 212.7 26.8% 83.9%;
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    background: var(--gradient-background);
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+  }
+}
+
+@layer components {
+  /* Plant Sprout Animation */
+  .sprout-container {
+    @apply relative inline-block;
+    animation: sprout-sway 3s ease-in-out infinite;
+    transform-origin: bottom center;
+  }
+
+  .sprout-stem {
+    @apply relative;
+    background: var(--gradient-stem);
+    border: 3px solid hsl(var(--shadow));
+    border-radius: 20px 20px 8px 8px;
+    box-shadow: 
+      inset 4px 0 0 hsl(var(--highlight) / 0.6),
+      0 4px 8px hsl(var(--shadow) / 0.3);
+  }
+
+  .sprout-leaf {
+    @apply absolute;
+    background: var(--gradient-leaf);
+    border: 3px solid hsl(var(--shadow));
+    border-radius: 50% 0 50% 0;
+    box-shadow: 
+      inset 2px -2px 0 hsl(var(--highlight) / 0.7),
+      0 3px 6px hsl(var(--shadow) / 0.2);
+    transform-origin: bottom right;
+  }
+
+  .sprout-leaf-left {
+    animation: leaf-bounce-left 3s ease-in-out infinite;
+  }
+
+  .sprout-leaf-right {
+    animation: leaf-bounce-right 3s ease-in-out infinite;
+  }
+
+  /* Animation keyframes */
+  @keyframes sprout-sway {
+    0%, 100% { 
+      transform: rotate(0deg);
+    }
+    25% { 
+      transform: rotate(-3deg);
+    }
+    50% { 
+      transform: rotate(0deg);
+    }
+    75% { 
+      transform: rotate(3deg);
+    }
+  }
+
+  @keyframes leaf-bounce-left {
+    0%, 100% { 
+      transform: rotate(-15deg) scale(1);
+    }
+    25% { 
+      transform: rotate(-18deg) scale(1.02);
+    }
+    50% { 
+      transform: rotate(-15deg) scale(1);
+    }
+    75% { 
+      transform: rotate(-12deg) scale(1.02);
+    }
+  }
+
+  @keyframes leaf-bounce-right {
+    0%, 100% { 
+      transform: rotate(25deg) scale(1);
+    }
+    25% { 
+      transform: rotate(22deg) scale(1.02);
+    }
+    50% { 
+      transform: rotate(25deg) scale(1);
+    }
+    75% { 
+      transform: rotate(28deg) scale(1.02);
+    }
+  }
+
+  /* Utility classes for PvZ styling */
+  .pvz-button {
+    @apply relative px-8 py-4 font-bold text-lg rounded-2xl border-4 border-solid;
+    background: linear-gradient(145deg, hsl(var(--secondary)), hsl(var(--secondary) / 0.8));
+    border-color: hsl(var(--shadow));
+    color: hsl(var(--secondary-foreground));
+    box-shadow: 
+      0 6px 0 hsl(var(--shadow)),
+      0 8px 15px hsl(var(--shadow) / 0.3);
+    transition: all 0.1s ease;
+  }
+
+  .pvz-button:hover {
+    transform: translateY(2px);
+    box-shadow: 
+      0 4px 0 hsl(var(--shadow)),
+      0 6px 12px hsl(var(--shadow) / 0.3);
+  }
+
+  .pvz-button:active {
+    transform: translateY(4px);
+    box-shadow: 
+      0 2px 0 hsl(var(--shadow)),
+      0 4px 8px hsl(var(--shadow) / 0.3);
+  }
+}
