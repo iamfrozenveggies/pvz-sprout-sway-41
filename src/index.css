@@ -226,61 +226,61 @@ All colors MUST be HSL.
 
   @keyframes leaf-bounce-left {
     0%, 100% { 
-      transform: rotate(-25deg) scale(1);
+      transform: rotate(25deg) scale(1);
     }
     25% { 
-      transform: rotate(-28deg) scale(1.02);
+      transform: rotate(28deg) scale(1.02);
     }
     50% { 
-      transform: rotate(-25deg) scale(1);
+      transform: rotate(25deg) scale(1);
     }
     75% { 
-      transform: rotate(-22deg) scale(1.02);
+      transform: rotate(22deg) scale(1.02);
     }
   }
 
   @keyframes leaf-bounce-right {
     0%, 100% { 
-      transform: rotate(35deg) scale(1);
+      transform: rotate(-35deg) scale(1);
     }
     25% { 
-      transform: rotate(32deg) scale(1.02);
+      transform: rotate(-32deg) scale(1.02);
     }
     50% { 
-      transform: rotate(35deg) scale(1);
+      transform: rotate(-35deg) scale(1);
     }
     75% { 
-      transform: rotate(38deg) scale(1.02);
+      transform: rotate(-38deg) scale(1.02);
     }
   }
 
   @keyframes leaf-bounce-bottom-left {
     0%, 100% { 
-      transform: rotate(-35deg) scale(1);
+      transform: rotate(35deg) scale(1);
     }
     25% { 
-      transform: rotate(-38deg) scale(1.03);
+      transform: rotate(38deg) scale(1.03);
     }
     50% { 
-      transform: rotate(-35deg) scale(1);
+      transform: rotate(35deg) scale(1);
     }
     75% { 
-      transform: rotate(-32deg) scale(1.03);
+      transform: rotate(32deg) scale(1.03);
     }
   }
 
   @keyframes leaf-bounce-bottom-right {
     0%, 100% { 
-      transform: rotate(45deg) scale(1);
+      transform: rotate(-45deg) scale(1);
     }
     25% { 
-      transform: rotate(42deg) scale(1.03);
+      transform: rotate(-42deg) scale(1.03);
     }
     50% { 
-      transform: rotate(45deg) scale(1);
+      transform: rotate(-45deg) scale(1);
     }
     75% { 
-      transform: rotate(48deg) scale(1.03);
+      transform: rotate(-48deg) scale(1.03);
     }
   }
 
