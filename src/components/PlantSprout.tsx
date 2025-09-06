@@ -15,7 +15,7 @@ export const PlantSprout: React.FC<PlantSproutProps> = ({
         <div 
           className="sprout-leaf sprout-leaf-top-left w-10 h-6 absolute"
           style={{
-            top: '-8px',
+            top: '-6px',
             right: '-32px',
             transformOrigin: 'left center',
           }}
@@ -25,7 +25,7 @@ export const PlantSprout: React.FC<PlantSproutProps> = ({
         <div 
           className="sprout-leaf sprout-leaf-top-right w-10 h-6 absolute"
           style={{
-            top: '2px',
+            top: '4px',
             left: '-36px',
             transformOrigin: 'right center',
           }}
@@ -35,7 +35,7 @@ export const PlantSprout: React.FC<PlantSproutProps> = ({
         <div 
           className="sprout-leaf sprout-leaf-left w-12 h-8 absolute"
           style={{
-            top: '12px',
+            top: '15px',
             right: '-38px',
             transformOrigin: 'left center',
           }}
@@ -45,7 +45,7 @@ export const PlantSprout: React.FC<PlantSproutProps> = ({
         <div 
           className="sprout-leaf sprout-leaf-right w-12 h-8 absolute"
           style={{
-            top: '22px',
+            top: '25px',
             left: '-42px',
             transformOrigin: 'right center',
           }}
@@ -55,7 +55,7 @@ export const PlantSprout: React.FC<PlantSproutProps> = ({
         <div 
           className="sprout-leaf sprout-leaf-bottom-left w-14 h-9 absolute"
           style={{
-            top: '32px',
+            top: '36px',
             right: '-42px',
             transformOrigin: 'left center',
           }}
@@ -65,7 +65,7 @@ export const PlantSprout: React.FC<PlantSproutProps> = ({
         <div 
           className="sprout-leaf sprout-leaf-bottom-right w-14 h-9 absolute"
           style={{
-            top: '42px',
+            top: '46px',
             left: '-46px',
             transformOrigin: 'right center',
           }}
