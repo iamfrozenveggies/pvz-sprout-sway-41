@@ -8,14 +8,14 @@ export const PlantSprout: React.FC<PlantSproutProps> = ({
   className = '' 
 }) => {
   return (
-    <div className={`sprout-container w-24 h-40 ${className}`}>
+    <div className={`sprout-container w-24 h-44 ${className}`}>
       {/* Stem */}
-      <div className="sprout-stem w-6 h-24 mx-auto relative">
+      <div className="sprout-stem w-6 h-28 mx-auto relative">
         {/* Top Left Leaf */}
         <div 
           className="sprout-leaf sprout-leaf-top-left w-10 h-6 absolute"
           style={{
-            top: '-10px',
+            top: '-6px',
             right: '-32px',
             transformOrigin: 'left center',
           }}
@@ -25,7 +25,7 @@ export const PlantSprout: React.FC<PlantSproutProps> = ({
         <div 
           className="sprout-leaf sprout-leaf-top-right w-10 h-6 absolute"
           style={{
-            top: '2px',
+            top: '6px',
             left: '-36px',
             transformOrigin: 'right center',
           }}
@@ -35,7 +35,7 @@ export const PlantSprout: React.FC<PlantSproutProps> = ({
         <div 
           className="sprout-leaf sprout-leaf-left w-12 h-8 absolute"
           style={{
-            top: '18px',
+            top: '22px',
             right: '-38px',
             transformOrigin: 'left center',
           }}
@@ -45,7 +45,7 @@ export const PlantSprout: React.FC<PlantSproutProps> = ({
         <div 
           className="sprout-leaf sprout-leaf-right w-12 h-8 absolute"
           style={{
-            top: '32px',
+            top: '36px',
             left: '-42px',
             transformOrigin: 'right center',
           }}
@@ -55,7 +55,7 @@ export const PlantSprout: React.FC<PlantSproutProps> = ({
         <div 
           className="sprout-leaf sprout-leaf-bottom-left w-14 h-9 absolute"
           style={{
-            top: '48px',
+            top: '52px',
             right: '-42px',
             transformOrigin: 'left center',
           }}
@@ -65,7 +65,7 @@ export const PlantSprout: React.FC<PlantSproutProps> = ({
         <div 
           className="sprout-leaf sprout-leaf-bottom-right w-14 h-9 absolute"
           style={{
-            top: '62px',
+            top: '66px',
             left: '-46px',
             transformOrigin: 'right center',
           }}
