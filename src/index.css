@@ -49,6 +49,13 @@ All colors MUST be HSL.
     --highlight: 60 100% 85%;
     --shadow: 140 40% 25%;
 
+    /* Tree colors */
+    --tree-trunk-brown: 25 60% 35%;
+    --tree-trunk-light: 35 50% 45%;
+    --tree-foliage-dark: 105 70% 35%;
+    --tree-foliage-mid: 115 75% 45%;
+    --tree-foliage-light: 125 80% 55%;
+
     /* Gradients */
     --gradient-leaf: linear-gradient(135deg, hsl(110 80% 50%), hsl(120 85% 45%));
     --gradient-stem: linear-gradient(180deg, hsl(130 60% 40%), hsl(140 55% 35%));
@@ -178,6 +185,52 @@ All colors MUST be HSL.
     animation: leaf-bounce-bottom-right 2.6s ease-in-out infinite;
   }
 
+  /* Tree Animation */
+  .tree-container {
+    @apply relative inline-block;
+    animation: tree-sway 4s ease-in-out infinite;
+    transform-origin: bottom center;
+  }
+
+  .tree-trunk {
+    @apply relative;
+    background: linear-gradient(180deg, hsl(var(--tree-trunk-light)), hsl(var(--tree-trunk-brown)));
+    border: 3px solid hsl(var(--shadow));
+    border-radius: 8px 8px 4px 4px;
+    box-shadow: 
+      inset 2px 0 0 hsl(var(--highlight) / 0.4),
+      0 4px 8px hsl(var(--shadow) / 0.3);
+  }
+
+  .tree-crown {
+    @apply relative;
+    animation: crown-sway 4.2s ease-in-out infinite;
+  }
+
+  .tree-foliage {
+    @apply rounded-full border-2;
+    border-color: hsl(var(--shadow));
+    box-shadow: 
+      inset -2px -2px 0 hsl(var(--shadow) / 0.3),
+      inset 2px 2px 0 hsl(var(--highlight) / 0.6),
+      0 2px 4px hsl(var(--shadow) / 0.2);
+  }
+
+  .tree-foliage-back {
+    background: linear-gradient(135deg, hsl(var(--tree-foliage-dark)), hsl(var(--tree-foliage-mid) / 0.8));
+    z-index: 1;
+  }
+
+  .tree-foliage-mid {
+    background: linear-gradient(135deg, hsl(var(--tree-foliage-mid)), hsl(var(--tree-foliage-light) / 0.9));
+    z-index: 2;
+  }
+
+  .tree-foliage-front {
+    background: linear-gradient(135deg, hsl(var(--tree-foliage-light)), hsl(var(--tree-foliage-mid)));
+    z-index: 3;
+  }
+
   /* Animation keyframes */
   @keyframes sprout-sway {
     0%, 100% { 
@@ -281,6 +334,36 @@ All colors MUST be HSL.
     }
     75% { 
       transform: rotate(33deg) scale(1.03);
+    }
+  }
+
+  @keyframes tree-sway {
+    0%, 100% { 
+      transform: rotate(0deg);
+    }
+    25% { 
+      transform: rotate(-2deg);
+    }
+    50% { 
+      transform: rotate(0deg);
+    }
+    75% { 
+      transform: rotate(2deg);
+    }
+  }
+
+  @keyframes crown-sway {
+    0%, 100% { 
+      transform: translateX(0px) rotate(0deg);
+    }
+    25% { 
+      transform: translateX(-2px) rotate(-1deg);
+    }
+    50% { 
+      transform: translateX(0px) rotate(0deg);
+    }
+    75% { 
+      transform: translateX(2px) rotate(1deg);
     }
   }
 

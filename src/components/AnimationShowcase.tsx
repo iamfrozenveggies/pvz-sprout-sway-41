@@ -1,5 +1,6 @@
 import React from 'react';
 import { PlantSprout } from './PlantSprout';
+import { Tree } from './Tree';
 import { Button } from '@/components/ui/button';
 import { Copy, Download, Sparkles } from 'lucide-react';
 import { toast } from 'sonner';
@@ -99,12 +100,12 @@ export const AnimationShowcase = () => {
         <div className="flex items-center justify-center gap-2 mb-4">
           <Sparkles className="w-8 h-8 text-primary" />
           <h1 className="text-5xl font-bold text-foreground">
-            Plant Sprout Animation
+            Plant Animations
           </h1>
           <Sparkles className="w-8 h-8 text-primary" />
         </div>
         <p className="text-xl text-muted-foreground mb-6">
-          Plants vs. Zombies inspired swaying sprout with cartoonish charm
+          Plants vs. Zombies inspired animations with cartoonish charm - sprout and tree
         </p>
         <div className="flex gap-4 justify-center">
           <Button 
@@ -130,17 +131,21 @@ export const AnimationShowcase = () => {
       <div className="bg-card/80 backdrop-blur-sm rounded-3xl p-12 border-4 border-border shadow-2xl mb-8">
         <div className="text-center mb-8">
           <h2 className="text-2xl font-bold text-card-foreground mb-4">
-            Perfect Sprout Animation
+            Plant Animation Collection
           </h2>
           <p className="text-muted-foreground">
-            Gentle swaying motion with leaves properly attached to the stem
+            Gentle swaying motions with PvZ-style cartoon aesthetics
           </p>
         </div>
         
-        <div className="flex justify-center">
+        <div className="flex justify-center gap-12">
           <div className="text-center">
             <PlantSprout />
-            <p className="mt-4 text-lg font-medium text-muted-foreground">Perfect Sprout Animation</p>
+            <p className="mt-4 text-lg font-medium text-muted-foreground">Sprout Animation</p>
+          </div>
+          <div className="text-center">
+            <Tree />
+            <p className="mt-4 text-lg font-medium text-muted-foreground">Tree Animation</p>
           </div>
         </div>
       </div>
