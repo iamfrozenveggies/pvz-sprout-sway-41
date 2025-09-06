@@ -51,15 +51,23 @@ export const PlantSprout: React.FC<PlantSproutProps> = ({
           }}
         />
 
-        {/* Bottom Left Leaf */}
+        {/* Mini Tree */}
         <div 
-          className="sprout-leaf sprout-leaf-bottom-left w-14 h-9 absolute"
+          className="absolute"
           style={{
-            top: '41px',
-            right: '-42px',
+            top: '35px',
+            right: '-50px',
             transformOrigin: 'left center',
           }}
-        />
+        >
+          {/* Tree trunk */}
+          <div className="w-2 h-8 bg-gradient-to-b from-amber-600 to-amber-800 border border-amber-900 rounded-sm mx-auto" />
+          {/* Tree foliage */}
+          <div className="relative -mt-2">
+            <div className="w-8 h-8 bg-gradient-to-br from-green-400 to-green-600 border-2 border-green-800 rounded-full absolute -top-2 -left-3" />
+            <div className="w-6 h-6 bg-gradient-to-br from-green-300 to-green-500 border border-green-700 rounded-full absolute -top-1 -left-1" />
+          </div>
+        </div>
         
         {/* Bottom Right Leaf */}
         <div 
