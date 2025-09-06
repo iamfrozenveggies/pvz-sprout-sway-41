@@ -154,12 +154,28 @@ All colors MUST be HSL.
     transform-origin: bottom right;
   }
 
+  .sprout-leaf-top-left {
+    animation: leaf-bounce-top-left 3.2s ease-in-out infinite;
+  }
+
+  .sprout-leaf-top-right {
+    animation: leaf-bounce-top-right 2.8s ease-in-out infinite;
+  }
+
   .sprout-leaf-left {
     animation: leaf-bounce-left 3s ease-in-out infinite;
   }
 
   .sprout-leaf-right {
     animation: leaf-bounce-right 3s ease-in-out infinite;
+  }
+
+  .sprout-leaf-bottom-left {
+    animation: leaf-bounce-bottom-left 3.4s ease-in-out infinite;
+  }
+
+  .sprout-leaf-bottom-right {
+    animation: leaf-bounce-bottom-right 2.6s ease-in-out infinite;
   }
 
   /* Animation keyframes */
@@ -175,6 +191,36 @@ All colors MUST be HSL.
     }
     75% { 
       transform: rotate(3deg);
+    }
+  }
+
+  @keyframes leaf-bounce-top-left {
+    0%, 100% { 
+      transform: rotate(-10deg) scale(1);
+    }
+    25% { 
+      transform: rotate(-13deg) scale(1.01);
+    }
+    50% { 
+      transform: rotate(-10deg) scale(1);
+    }
+    75% { 
+      transform: rotate(-7deg) scale(1.01);
+    }
+  }
+
+  @keyframes leaf-bounce-top-right {
+    0%, 100% { 
+      transform: rotate(20deg) scale(1);
+    }
+    25% { 
+      transform: rotate(17deg) scale(1.01);
+    }
+    50% { 
+      transform: rotate(20deg) scale(1);
+    }
+    75% { 
+      transform: rotate(23deg) scale(1.01);
     }
   }
 
@@ -205,6 +251,36 @@ All colors MUST be HSL.
     }
     75% { 
       transform: rotate(28deg) scale(1.02);
+    }
+  }
+
+  @keyframes leaf-bounce-bottom-left {
+    0%, 100% { 
+      transform: rotate(-20deg) scale(1);
+    }
+    25% { 
+      transform: rotate(-23deg) scale(1.03);
+    }
+    50% { 
+      transform: rotate(-20deg) scale(1);
+    }
+    75% { 
+      transform: rotate(-17deg) scale(1.03);
+    }
+  }
+
+  @keyframes leaf-bounce-bottom-right {
+    0%, 100% { 
+      transform: rotate(30deg) scale(1);
+    }
+    25% { 
+      transform: rotate(27deg) scale(1.03);
+    }
+    50% { 
+      transform: rotate(30deg) scale(1);
+    }
+    75% { 
+      transform: rotate(33deg) scale(1.03);
     }
   }
 
